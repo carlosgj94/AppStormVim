@@ -1,5 +1,5 @@
 "This maps The Nerd Tree to <F2>
-map <F2> :NERDTreeToggle<CR>
+map <F2> :NERDTreeToggle <CR>
 
 autocmd VimEnter * NERDTree
 autocmd BufWinEnter * NERDTreeMirror
@@ -8,4 +8,6 @@ autocmd BufWinEnter * NERDTreeMirror
 " tnoremap <ESC> <C-\><C-n>:bn<ENTER>
 tnoremap <ESC> <C-\><C-n>
 
+"This maps Goyo to F3"
+ map <F3> :Goyo <CR>
 
