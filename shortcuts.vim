@@ -5,7 +5,6 @@ autocmd VimEnter * NERDTree
 autocmd BufWinEnter * NERDTreeMirror
 
 " Exit the terminal with esc
-" tnoremap <ESC> <C-\><C-n>:bn<ENTER>
 tnoremap <ESC> <C-\><C-n>
 
 
