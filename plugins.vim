@@ -1,12 +1,40 @@
 call plug#begin('~/.config/nvim/plugged')
-" Dracula theme for vim
+
+"**************THEMES*******************"
+"Dracula theme for vim"
 Plug 'dracula/vim'
-"NerdTree
+
+
+"*************INTERFACE*****************"
+"NerdTree"
 Plug 'scrooloose/nerdtree'
-"The line in the botton
-Plug 'bling/vim-airline'
-"Themes for vimairline
-Plug 'vim-airline/vim-airline-themes' 
-"Buffers/Tabs line
-Plug 'bling/vim-bufferline'
+"Buffers/Tabs line"
+Plug 'fholgado/minibufexpl.vim'
+"Bottom lineº
+Plug 'itchyny/lightline.vim'
+"Show line numbers"
+Plug 'myusuf3/numbers.vim'
+"Goyo"
+Plug 'junegunn/goyo.vim'
+"Awesome icons"
+Plug 'ryanoasis/vim-devicons'
+"Awesome start display"
+Plug 'mhinz/vim-startify'
+
+"*************CODE DISPLAY***************"
+"Show rainbow parentheses"
+Plug 'kien/rainbow_parentheses.vim'
+
+
+"*************LANGUAGES******************"
+
+
+
+
 call plug#end()
+
+
+"Configuration bottom line"
+let g:lightline = {
+      \ 'colorscheme': 'Dracula',
+      \ }
