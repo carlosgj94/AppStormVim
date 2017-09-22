@@ -1,8 +1,10 @@
-source ./plugins.vim
-source ./shortcuts.vim
+source ~/.config/nvim/plugins.vim
+source ~/.config/nvim/shortcuts.vim
 
 "Map the esc to jj
 imap jk <ESC> 
+"Map leader 
+let mapleader=","
 
 """""""""Indentacion""""""""""""""""""
 filetype plugin indent on
@@ -17,3 +19,5 @@ set expandtab
 
 "Usamos colorscheme
 color dracula
+
+let g:NERDTreeWinSize=25

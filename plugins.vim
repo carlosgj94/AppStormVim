@@ -20,14 +20,20 @@ Plug 'junegunn/goyo.vim'
 Plug 'ryanoasis/vim-devicons'
 "Awesome start display"
 Plug 'mhinz/vim-startify'
+"Shows git diff in the numbers line
+Plug 'airblade/vim-gitgutter'
 
 "*************CODE DISPLAY***************"
 "Show rainbow parentheses"
 Plug 'kien/rainbow_parentheses.vim'
-
+"Python style guide
+Plug 'cburroughs/pep8.py'
 
 "*************LANGUAGES******************"
-
+Plug 'plasticboy/vim-markdown'
+Plug 'tomlion/vim-solidity'
+Plug 'rust-lang/rust.vim'
+Plug 'jnwhiteh/vim-golang'
 
 
 
