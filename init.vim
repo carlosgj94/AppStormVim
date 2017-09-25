@@ -20,4 +20,10 @@ set expandtab
 "Usamos colorscheme
 color dracula
 
+" <Ctrl-l> redraws the screen and removes any search highlighting.
+nnoremap <silent> <C-l> :nohl<CR><C-l>
+
+" <Ctrl-b> indent all the code
+noremap <C-b> gg=G
+
 let g:NERDTreeWinSize=25
