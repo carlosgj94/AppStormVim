@@ -22,6 +22,8 @@ Plug 'ryanoasis/vim-devicons'
 Plug 'mhinz/vim-startify'
 "Shows git diff in the numbers line
 Plug 'airblade/vim-gitgutter'
+"Shows a line with the indent of the line
+Plug 'yggdroot/indentline'
 
 "*************CODE DISPLAY***************"
 "Show rainbow parentheses"
