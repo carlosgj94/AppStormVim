@@ -9,3 +9,6 @@ tnoremap <ESC> <C-\><C-n>
 
 "This maps Goyo to F3"
  map <F3> :Goyo <CR>
+
+ "Deoplete for autocompletion
+ let g:deoplete#enable_at_startup = 1
