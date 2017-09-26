@@ -32,10 +32,13 @@ Plug 'kien/rainbow_parentheses.vim'
 Plug 'cburroughs/pep8.py'
 "Show hex colors from css inline with a background around the text
 Plug 'chrisbra/colorizer'
+"Commenting pluggin
+Plug 'scrooloose/nerdcommenter'
 
 "General Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
+
 
 "*************LANGUAGES******************"
 Plug 'plasticboy/vim-markdown'

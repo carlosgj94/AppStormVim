@@ -4,7 +4,10 @@ source ~/.config/nvim/shortcuts.vim
 "Map the esc to jj
 imap jk <ESC> 
 "Map leader 
-let mapleader=","
+map <SPACE> <leader>
+
+"Syntax on for commenting correctly
+filetype plugin on
 
 """""""""Indentacion""""""""""""""""""
 filetype plugin indent on
