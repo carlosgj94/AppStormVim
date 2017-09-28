@@ -14,6 +14,7 @@ Plug 'lifepillar/vim-wwdc17-theme'
 "*************INTERFACE*****************"
 "NerdTree"
 Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin' 
 "Bottom lineº
 Plug 'itchyny/lightline.vim'
 "Show line numbers"
@@ -52,6 +53,7 @@ Plug 'tomlion/vim-solidity'
 Plug 'rust-lang/rust.vim'
 Plug 'jnwhiteh/vim-golang'
 Plug 'kchmck/vim-coffee-script'
+Plug 'moll/vim-node'
 
 "Language autocompletion
 "Python autcompletion
