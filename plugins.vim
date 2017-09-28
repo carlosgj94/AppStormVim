@@ -3,6 +3,12 @@ call plug#begin('~/.config/nvim/plugged')
 "**************THEMES*******************"
 "Dracula theme for vim"
 Plug 'dracula/vim'
+"Solarized for bright themes
+Plug 'altercation/vim-colors-solarized'
+"Crayon theme
+Plug 'float168/vim-colors-cherryblossom'
+"Lets fanboy ourselfs!
+Plug 'lifepillar/vim-wwdc17-theme'
 
 
 "*************INTERFACE*****************"
@@ -27,7 +33,7 @@ Plug 'yggdroot/indentline'
 
 "*************CODE DISPLAY***************"
 "Show rainbow parentheses"
-Plug 'kien/rainbow_parentheses.vim'
+Plug 'luochen1990/rainbow'
 "Python style guide
 Plug 'cburroughs/pep8.py'
 "Show hex colors from css inline with a background around the text
@@ -70,3 +76,5 @@ call plug#end()
 let g:lightline = {
       \ 'colorscheme': 'Dracula',
       \ }
+
+let g:rainbow_active = 1

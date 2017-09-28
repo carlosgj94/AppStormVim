@@ -32,3 +32,4 @@ map + 2<C-W>>
 " Control + w + s = Open a new horizontal screen
 " + = Makes the current window bigger
 " - = Makes the current window smaller
+" To create a file in the nerdtree plugin, just go to it and write: m
