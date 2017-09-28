@@ -14,8 +14,6 @@ Plug 'lifepillar/vim-wwdc17-theme'
 "*************INTERFACE*****************"
 "NerdTree"
 Plug 'scrooloose/nerdtree'
-"Buffers/Tabs line"
-Plug 'fholgado/minibufexpl.vim'
 "Bottom lineº
 Plug 'itchyny/lightline.vim'
 "Show line numbers"
@@ -30,6 +28,8 @@ Plug 'mhinz/vim-startify'
 Plug 'airblade/vim-gitgutter'
 "Shows a line with the indent of the line
 Plug 'yggdroot/indentline'
+"Buffer line
+Plug 'mgee/lightline-bufferline'
 
 "*************CODE DISPLAY***************"
 "Show rainbow parentheses"
@@ -78,3 +78,11 @@ let g:lightline = {
       \ }
 
 let g:rainbow_active = 1
+
+let g:lightline#bufferline#show_number  = 1
+let g:lightline#bufferline#shorten_path = 0
+let g:lightline#bufferline#unnamed      = '[No Name]'
+
+let g:lightline.tabline          = {'left': [['buffers']], 'right': [['close']]}
+let g:lightline.component_expand = {'buffers': 'lightline#bufferline#buffers'}
+let g:lightline.component_type   = {'buffers': 'tabsel'}

@@ -7,6 +7,8 @@ imap jk <ESC>
 imap <silent> :w <C-o>:w<CR>
 "Map leader 
 map <SPACE> <leader>
+"Shows tabline, always
+set showtabline=2
 
 "Syntax on for commenting correctly
 filetype plugin on
@@ -32,3 +34,8 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 noremap <C-b> gg=G
 
 let g:NERDTreeWinSize=25
+
+"No insert word needed anymore
+set noshowmode
+
+setlocal statusline=%#Normal#
