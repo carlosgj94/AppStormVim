@@ -33,3 +33,4 @@ map + 2<C-W>>
 " + = Makes the current window bigger
 " - = Makes the current window smaller
 " To create a file in the nerdtree plugin, just go to it and write: m
+" Write ':w' in insert mode to save the file and continue editing

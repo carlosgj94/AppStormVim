@@ -3,6 +3,8 @@ source ~/.config/nvim/shortcuts.vim
 
 "Map the esc to jj
 imap jk <ESC> 
+"Write :w to save in insert mode
+imap <silent> :w <C-o>:w<CR>
 "Map leader 
 map <SPACE> <leader>
 
