@@ -1,7 +1,7 @@
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/shortcuts.vim
 
-"Map the esc to jj
+"Map the esc to jk
 imap jk <ESC> 
 "Write :w to save in insert mode
 imap <silent> :w <C-o>:w<CR>
@@ -12,6 +12,7 @@ set showtabline=2
 
 "Syntax on for commenting correctly
 filetype plugin on
+
 
 """""""""Indentacion""""""""""""""""""
 filetype plugin indent on

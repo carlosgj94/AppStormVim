@@ -54,6 +54,7 @@ Plug 'rust-lang/rust.vim'
 Plug 'jnwhiteh/vim-golang'
 Plug 'kchmck/vim-coffee-script'
 Plug 'moll/vim-node'
+Plug 'othree/javascript-libraries-syntax.vim'
 
 "Language autocompletion
 "Python autcompletion
@@ -76,8 +77,8 @@ call plug#end()
 
 "Configuration bottom line"
 let g:lightline = {
-      \ 'colorscheme': 'Dracula',
-      \ }
+            \ 'colorscheme': 'Dracula',
+            \ }
 
 let g:rainbow_active = 1
 
