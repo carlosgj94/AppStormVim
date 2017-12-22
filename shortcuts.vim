@@ -29,6 +29,9 @@ noremap <LEADER>f   :Files<CR>
 "Leader working with the lines finder
 noremap <LEADER>l   :Lines<CR>
 
+"Leader + tab to change to previous buffer
+noremap <LEADER><TAB>   :b#<CR>
+
 """""""SUMARY"""""""
 " Control + l = unselect the words when searching
 " Control + b = indent the code
