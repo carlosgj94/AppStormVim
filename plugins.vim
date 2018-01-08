@@ -10,6 +10,16 @@ Plug 'float168/vim-colors-cherryblossom'
 "Sonho theme
 Plug 'protesilaos/prot16-vim'
 Plug 'protesilaos/prot16-vim-airline'
+" Github theme
+Plug 'endel/vim-github-colorscheme'
+" Strawberry
+Plug 'nightsense/strawberry'
+" Wonka
+Plug 'nightsense/wonka'
+" Neon
+Plug 'midnapeach/neonwave.vim'
+" Vice
+Plug 'bcicen/vim-vice'
 
 
 "*************INTERFACE*****************"
@@ -40,6 +50,10 @@ Plug 'junegunn/fzf.vim'
 Plug 'easymotion/vim-easymotion'
 " Tab to autocomplete when searching for words
 Plug 'vim-scripts/SearchComplete'
+" Window max. on 'c+w o'
+Plug 'vim-scripts/ZoomWin'
+" Window resize automatically
+Plug 'roman/golden-ratio'
 
 "*************CODE DISPLAY***************"
 "Show rainbow parentheses"
@@ -60,8 +74,13 @@ Plug 'tomlion/vim-solidity'
 Plug 'rust-lang/rust.vim'
 Plug 'jnwhiteh/vim-golang'
 "Plug 'moll/vim-node'
-"Plug 'othree/javascript-libraries-syntax.vim'
 Plug 'posva/vim-vue'
+"Flow Autocomplete
+Plug 'wokalski/autocomplete-flow'
+
+" You will also need the following for function argument completion:
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
 
 "Language autocompletion
 "Python autcompletion
@@ -71,19 +90,15 @@ Plug 'zchee/deoplete-clang'
 "Rust autocompletion
 "Follow this instructions for rust: https://vimawesome.com/plugin/deoplete-rust
 Plug 'sebastianmarkow/deoplete-rust'
-"Javascript autocompletion
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-" Javascript Linter
-Plug 'timheap/linters.vim'
 
 call plug#end()
 
-
 "Configuration bottom line"
-"let g:lightline = {
-"            \ 'colorscheme': 'solarized',
-"            \ }
-
 let g:airline_theme='sonho_light'
+
+let g:deoplete#enable_at_startup = 1
+
+" neosnippet
+let g:neosnippet#enable_completed_snippet = 1
 
 "let g:rainbow_active = 1

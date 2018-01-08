@@ -47,3 +47,20 @@ set background=light
 let g:solarized_termtrans = 1
 colorscheme sonho_light
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+
+
+ "" airline settings
+  " remove separators
+  let g:airline_left_sep=''
+  let g:airline_right_sep=''
+  " remove unused modes
+  let g:airline_enable_fugitive=0
+  let g:airline_enable_syntastic=0
+let g:airline_section_a = '  '
+" remove separators for empty sections
+let g:airline_skip_empty_sections = 1
+" set second section to filename
+  let g:airline_section_b="%f"
+   " empty third and fourth sections
+  let g:airline_section_c=""
+  let g:airline_section_x=""
