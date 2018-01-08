@@ -96,9 +96,4 @@ call plug#end()
 "Configuration bottom line"
 let g:airline_theme='sonho_light'
 
-let g:deoplete#enable_at_startup = 1
-
-" neosnippet
-let g:neosnippet#enable_completed_snippet = 1
-
 "let g:rainbow_active = 1
