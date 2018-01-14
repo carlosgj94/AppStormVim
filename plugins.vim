@@ -66,7 +66,13 @@ Plug 'scrooloose/nerdcommenter'
 "General Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
+" Snippets to create code automatically
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'honza/vim-snippets'
 
+" Auto pairs completion in brackets
+Plug 'jiangmiao/auto-pairs'
 
 "*************LANGUAGES******************"
 Plug 'plasticboy/vim-markdown'
