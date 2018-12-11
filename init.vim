@@ -19,10 +19,10 @@ set norelativenumber
 
 """""""""Indentacion""""""""""""""""""
 filetype plugin indent on
-" show existing tab with 2 spaces width
-set tabstop=2
-" when indenting ">", use 2 spaces width
-set shiftwidth=2
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting ">", use 4 spaces width
+set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 """"""""End Indentacion"""""""""""""""
@@ -34,9 +34,9 @@ set expandtab
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " <Ctrl-b> indent all the code
-noremap <C-b> gg=G
+noremap <LEADER>b gg=G
 
-"let g:NERDTreeWinSize=40
+"let g:NERDTreeWinSize=20
 
 "No insert word needed anymore
 set noshowmode

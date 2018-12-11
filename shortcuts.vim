@@ -10,8 +10,8 @@ let g:NERDTreeWinPos = "right"
 tnoremap jk <C-\><C-n>
 vnoremap gh <ESC>
 
-"This maps Goyo to F3"
-map <F3> :Goyo <CR>
+"This maps Goyo"
+map <LEADER>go :Goyo <CR>
 
 "Deoplete for autocompletion
 let g:deoplete#enable_at_startup = 1
@@ -75,19 +75,21 @@ noremap <LEADER><TAB>   :b#<CR>
 nnoremap <leader>y :Yapf<cr>
 
 """""""SUMARY"""""""
-" Control + l = unselect the words when searching
-" Control + b = indent the code
-" t  = Opens the files (nerdtree)
-" n = Show/hide line numbers
-" y = Yapf formatter
-" F3 = Opens the minimal screen (goyo)
+" [Control] + l = unselect the words when searching
+" [Space]   + b = indent the code (beautify)
+" [Space]   + t = Opens the files (nerdtree)
+" [Space]   + n = Show/hide line numbers
+" [Space]   + y = Yapf formatter
+" [Space]   + go = Opens the minimal screen (goyo)
+"
 " Esc to exit the terminal enabled
-" Space + c + i = dis/comment the current line.
+" [Space] + ci = dis/comment the current line.
 " :Term = Opens the terminal
-" Control + w + v = Open a new vertical screen
-" Control + w + s = Open a new horizontal screen
+" [Control] + w + v = Open a new vertical screen
+" [Control] + w + s = Open a new horizontal screen
 " + = Makes the current window bigger
 " - = Makes the current window smaller
+"
 " To create a file in the nerdtree plugin, just go to it and write: m
 " Write ':w' in insert mode to save the file and continue editing
 " Leader --> ctrl+w then you can type whatever you want
