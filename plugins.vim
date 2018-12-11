@@ -110,7 +110,6 @@ Plug 'rizzatti/dash.vim'
 call plug#end()
 
 "Configuration bottom line"
-let g:airline_theme='challenger_deep'
-let g:airline_solarized_bg='light'
+let g:airline_theme='sonho_light'
 
 let g:rainbow_active = 1

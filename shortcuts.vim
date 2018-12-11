@@ -30,7 +30,7 @@ let g:deoplete#enable_smart_case = 1
 
 " For conceal markers.
 if has('conceal')
-  set conceallevel=2 concealcursor=niv
+    set conceallevel=2 concealcursor=niv
 endif
 
 " Delay time for deoplete
@@ -65,7 +65,7 @@ noremap <LEADER>f   :Files<CR>
 noremap <LEADER>l   :Lines<CR>
 
 "Leader working with the lines finder
-noremap <LEADER>b   :Buffers<CR>
+noremap <LEADER>e   :Buffers<CR>
 
 "Leader + tab to change to previous buffer
 noremap <LEADER><TAB>   :b#<CR>

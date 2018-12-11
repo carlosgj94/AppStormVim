@@ -48,7 +48,7 @@ syntax enable
 set background=light
 let g:solarized_termcolors=256 
 let g:solarized_termtrans = 1
-colorscheme challenger_deep 
+colorscheme sonho_light 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
 let g:python_host_prog = '/Users/xpi2/miniconda3/bin/python'
