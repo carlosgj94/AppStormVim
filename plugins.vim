@@ -4,37 +4,38 @@ call plug#begin('~/.config/nvim/plugged')
 "Dracula theme for vim"
 Plug 'dracula/vim'
 "Solarized for bright themes
-Plug 'altercation/vim-colors-solarized'
-"Crayon theme
-Plug 'float168/vim-colors-cherryblossom'
+"Plug 'altercation/vim-colors-solarized'
+Plug 'ericbn/vim-solarized'
 "Sonho theme
 Plug 'protesilaos/prot16-vim'
 Plug 'protesilaos/prot16-vim-airline'
-" Github theme
-Plug 'endel/vim-github-colorscheme'
-" Strawberry
-Plug 'nightsense/strawberry'
-" Wonka
-Plug 'nightsense/wonka'
-" Neon
-Plug 'midnapeach/neonwave.vim'
-" Vice
-Plug 'bcicen/vim-vice'
-
+" Challenger deep
+Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
+" Minimal
+Plug 'andreypopp/vim-colors-plain'
+Plug 'wolverian/minimal'
+Plug 'andreypopp/vim-colors-plain'
 
 "*************INTERFACE*****************"
 "Golden Ratio
 Plug 'roman/golden-ratio'
+
+" Vim Notes
+Plug 'xolox/vim-misc'
+Plug 'xolox/vim-notes'
+
 "NerdTree"
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 "Bottom line
-"Plug 'itchyny/lightline.vim'
 Plug 'bling/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 "Show line numbers"
+
 Plug 'myusuf3/numbers.vim'
 "Goyo"
 Plug 'junegunn/goyo.vim'
+
 "Awesome icons"
 Plug 'ryanoasis/vim-devicons'
 "Awesome start display"
@@ -48,33 +49,29 @@ Plug 'airblade/vim-rooter'
 " Fuzzy finder files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-" Move around the terminal easier
-Plug 'easymotion/vim-easymotion'
 " Tab to autocomplete when searching for words
 Plug 'vim-scripts/SearchComplete'
 " Window max. on 'c+w o'
 Plug 'vim-scripts/ZoomWin'
 " Window resize automatically
 Plug 'roman/golden-ratio'
+" Searching for words
+Plug 'easymotion/vim-easymotion'
 
 "*************CODE DISPLAY***************"
 "Show rainbow parentheses"
 Plug 'luochen1990/rainbow'
-"Python style guide
-Plug 'cburroughs/pep8.py'
 "Commenting pluggin
 Plug 'scrooloose/nerdcommenter'
-
 "General Autocompletion
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'ervandew/supertab'
-" Snippets to create code automatically
-Plug 'Shougo/neosnippet'
-Plug 'Shougo/neosnippet-snippets'
-Plug 'honza/vim-snippets'
-
 " Auto pairs completion in brackets
-Plug 'jiangmiao/auto-pairs'
+" Plug 'jiangmiao/auto-pairs'
+" Linter
+Plug 'w0rp/ale'
+" Show the yanked zone
+Plug 'machakann/vim-highlightedyank'
 
 "Lintern
 Plug 'w0rp/ale'
@@ -84,11 +81,9 @@ Plug 'w0rp/ale'
 Plug 'Chiel92/vim-autoformat'
 
 "*************LANGUAGES******************"
-Plug 'plasticboy/vim-markdown'
 Plug 'tomlion/vim-solidity'
 Plug 'rust-lang/rust.vim'
-Plug 'jnwhiteh/vim-golang'
-"Plug 'moll/vim-node'
+Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'posva/vim-vue'
 "Flow Autocomplete
 Plug 'wokalski/autocomplete-flow'
@@ -107,10 +102,15 @@ Plug 'zchee/deoplete-clang'
 "Rust autocompletion
 "Follow this instructions for rust: https://vimawesome.com/plugin/deoplete-rust
 Plug 'sebastianmarkow/deoplete-rust'
+Plug 'racer-rust/vim-racer'
+
+" Dash App
+Plug 'rizzatti/dash.vim'
 
 call plug#end()
 
 "Configuration bottom line"
-let g:airline_theme='sonho_light'
+let g:airline_theme='challenger_deep'
+let g:airline_solarized_bg='light'
 
-"let g:rainbow_active = 1
+let g:rainbow_active = 1
