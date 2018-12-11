@@ -14,28 +14,29 @@ map <SPACE> <leader>
 filetype plugin on
 
 " I dont want numbers
-set nornu
 set nonumber
+set norelativenumber
 
 """""""""Indentacion""""""""""""""""""
 filetype plugin indent on
-" show existing tab with 2 spaces width
-set tabstop=2
-" when indenting ">", use 2 spaces width
-set shiftwidth=2
+" show existing tab with 4 spaces width
+set tabstop=4
+" when indenting ">", use 4 spaces width
+set shiftwidth=4
 " On pressing tab, insert 4 spaces
 set expandtab
 """"""""End Indentacion"""""""""""""""
 
-
+"Init with NERDTree
+"autocmd vimenter * NERDTree
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
 
 " <Ctrl-b> indent all the code
-noremap <C-b> gg=G
+noremap <LEADER>b gg=G
 
-let g:NERDTreeWinSize=25
+"let g:NERDTreeWinSize=20
 
 "No insert word needed anymore
 set noshowmode
@@ -50,15 +51,18 @@ let g:solarized_termtrans = 1
 colorscheme challenger_deep 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+let g:python_host_prog = '/Users/xpi2/miniconda3/bin/python'
+let g:python3_host_prog = '/Users/xpi2/miniconda3/bin/python3'
 
-"" airline settings
-" remove separators
-let g:airline_left_sep=''
-let g:airline_right_sep=''
-" remove unused modes
-let g:airline_enable_fugitive=0
-let g:airline_enable_syntastic=0
-let g:airline_section_a = ' 🦄 '
+ "" airline settings
+  " remove separators
+  let g:airline_left_sep=''
+  let g:airline_right_sep=''
+  " remove unused modes
+  let g:airline_enable_fugitive=0
+  let g:airline_enable_syntastic=0
+let g:airline_section_a = ' 🐍 '
+
 " remove separators for empty sections
 let g:airline_skip_empty_sections = 1
 " set second section to filename

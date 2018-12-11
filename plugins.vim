@@ -17,9 +17,13 @@ Plug 'wolverian/minimal'
 Plug 'andreypopp/vim-colors-plain'
 
 "*************INTERFACE*****************"
+"Golden Ratio
+Plug 'roman/golden-ratio'
+
 " Vim Notes
 Plug 'xolox/vim-misc'
 Plug 'xolox/vim-notes'
+
 "NerdTree"
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -27,7 +31,11 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'bling/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 "Show line numbers"
-"Plug 'myusuf3/numbers.vim'
+
+Plug 'myusuf3/numbers.vim'
+"Goyo"
+Plug 'junegunn/goyo.vim'
+
 "Awesome icons"
 Plug 'ryanoasis/vim-devicons'
 "Awesome start display"
@@ -65,6 +73,13 @@ Plug 'w0rp/ale'
 " Show the yanked zone
 Plug 'machakann/vim-highlightedyank'
 
+"Lintern
+Plug 'w0rp/ale'
+
+"General formatting
+"needs third-party programs for each lenguage (see documentation)
+Plug 'Chiel92/vim-autoformat'
+
 "*************LANGUAGES******************"
 Plug 'tomlion/vim-solidity'
 Plug 'rust-lang/rust.vim'
@@ -72,11 +87,26 @@ Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'posva/vim-vue'
 "Flow Autocomplete
 Plug 'wokalski/autocomplete-flow'
+
+" You will also need the following for function argument completion:
+Plug 'Shougo/neosnippet'
+Plug 'Shougo/neosnippet-snippets'
+
+"Language autocompletion
+"Python autcompletion and formatting
+Plug 'zchee/deoplete-jedi'
+Plug 'mindriot101/vim-yapf'
+
+"C++ and related languages
+Plug 'zchee/deoplete-clang'
+"Rust autocompletion
+"Follow this instructions for rust: https://vimawesome.com/plugin/deoplete-rust
+Plug 'sebastianmarkow/deoplete-rust'
 Plug 'racer-rust/vim-racer'
-"Dash App
+
+" Dash App
 Plug 'rizzatti/dash.vim'
-" Pico8
-Plug 'justinj/vim-pico8-syntax'
+
 call plug#end()
 
 "Configuration bottom line"

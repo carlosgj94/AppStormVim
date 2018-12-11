@@ -1,5 +1,5 @@
 "This maps The Nerd Tree to <F2>
-map <F2> :NERDTreeToggle <CR>
+map <LEADER>t :NERDTreeToggle <CR>
 
 " This will start Startify and Nerdtree in the right order
 autocmd VimEnter * if !argc() | Startify | NERDTree | wincmd w | endif
@@ -10,8 +10,8 @@ autocmd VimEnter * if !argc() | Startify | NERDTree | wincmd w | endif
 tnoremap jk <C-\><C-n>
 vnoremap gh <ESC>
 
-"This maps Goyo to F3"
-map <F3> :Goyo <CR>
+"This maps Goyo"
+map <LEADER>go :Goyo <CR>
 
 " Enable completion where available.
 let g:ale_completion_enabled = 1
@@ -52,6 +52,9 @@ let g:rustfmt_autosave = 1
 map - 2<C-W><
 map + 2<C-W>>
 
+"Show/hide line numbers
+noremap <silent> <LEADER>n :NumbersToggle <CR> :NumbersOnOff<CR>
+
 "Leader working with the windows
 noremap <LEADER>w   <C-w>
 
@@ -67,36 +70,25 @@ noremap <LEADER>b   :Buffers<CR>
 "Leader + tab to change to previous buffer
 noremap <LEADER><TAB>   :b#<CR>
 
-" EasyMotions shortcuts
-let g:EasyMotion_do_mapping = 0 " Disable default mappings
-
-" Jump to anywhere you want with minimal keystrokes, with just one key binding.
-" `s{char}{label}`
-nmap s <Plug>(easymotion-overwin-f)
-" or
-" `s{char}{char}{label}`
-" Need one more keystroke, but on average, it may be more comfortable.
-nmap s <Plug>(easymotion-overwin-f2)
-
-" Turn on case insensitive feature
-let g:EasyMotion_smartcase = 1
-
-" JK motions: Line motions
-map <Leader>j <Plug>(easymotion-j)
-map <Leader>k <Plug>(easymotion-k)
+"Yapf formatter
+nnoremap <leader>y :Yapf<cr>
 
 """""""SUMARY"""""""
-" Control + l = unselect the words when searching
-" Control + b = indent the code
-" F2  = Opens the files (nerdtree)
-" F3 = Opens the minimal screen (goyo)
+" [Control] + l = unselect the words when searching
+" [Space]   + b = indent the code (beautify)
+" [Space]   + t = Opens the files (nerdtree)
+" [Space]   + n = Show/hide line numbers
+" [Space]   + y = Yapf formatter
+" [Space]   + go = Opens the minimal screen (goyo)
+"
 " Esc to exit the terminal enabled
-" Space + c + i = dis/comment the current line.
+" [Space] + ci = dis/comment the current line.
 " :Term = Opens the terminal
-" Control + w + v = Open a new vertical screen
-" Control + w + s = Open a new horizontal screen
+" [Control] + w + v = Open a new vertical screen
+" [Control] + w + s = Open a new horizontal screen
 " + = Makes the current window bigger
 " - = Makes the current window smaller
+"
 " To create a file in the nerdtree plugin, just go to it and write: m
 " Write ':w' in insert mode to save the file and continue editing
 " Leader --> ctrl+w then you can type whatever you want
