@@ -1,4 +1,4 @@
-# AppStormVim
+# PiVim
 NeoVim configuration originally done by AppStorming UPM Club then continued by [@carlosgj94](https://github.com/carlosgj94) and myself.
 
 Now forked to a custom Python semi-IDE configuration.
