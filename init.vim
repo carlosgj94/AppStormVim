@@ -14,8 +14,8 @@ map <SPACE> <leader>
 filetype plugin on
 
 " I dont want numbers
-set nornu
 set nonumber
+set norelativenumber
 
 """""""""Indentacion""""""""""""""""""
 filetype plugin indent on
@@ -27,7 +27,8 @@ set shiftwidth=2
 set expandtab
 """"""""End Indentacion"""""""""""""""
 
-
+"Init with NERDTree
+"autocmd vimenter * NERDTree
 
 " <Ctrl-l> redraws the screen and removes any search highlighting.
 nnoremap <silent> <C-l> :nohl<CR><C-l>
@@ -35,7 +36,7 @@ nnoremap <silent> <C-l> :nohl<CR><C-l>
 " <Ctrl-b> indent all the code
 noremap <C-b> gg=G
 
-let g:NERDTreeWinSize=25
+"let g:NERDTreeWinSize=40
 
 "No insert word needed anymore
 set noshowmode
@@ -48,6 +49,8 @@ let g:solarized_termtrans = 1
 colorscheme sonho_light
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
+let g:python_host_prog = '/Users/xpi2/miniconda3/bin/python'
+let g:python3_host_prog = '/Users/xpi2/miniconda3/bin/python3'
 
  "" airline settings
   " remove separators
@@ -56,7 +59,7 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
   " remove unused modes
   let g:airline_enable_fugitive=0
   let g:airline_enable_syntastic=0
-let g:airline_section_a = '  '
+let g:airline_section_a = ' ⚙︎ '
 " remove separators for empty sections
 let g:airline_skip_empty_sections = 1
 " set second section to filename

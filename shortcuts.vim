@@ -1,5 +1,5 @@
 "This maps The Nerd Tree to <F2>
-map <F2> :NERDTreeToggle <CR>
+map <LEADER>t :NERDTreeToggle <CR>
 
 " This will start Startify and Nerdtree in the right order
 autocmd VimEnter * if !argc() | Startify | wincmd w | endif
@@ -56,6 +56,9 @@ let g:neosnippet#snippets_directory='~/.config/nvim/plugged/vim-snippets/snippet
 map - 2<C-W><
 map + 2<C-W>>
 
+"Show/hide line numbers
+noremap <silent> <LEADER>n :NumbersToggle <CR> :NumbersOnOff<CR>
+
 "Leader working with the windows
 noremap <LEADER>w   <C-w>
 
@@ -68,10 +71,15 @@ noremap <LEADER>l   :Lines<CR>
 "Leader + tab to change to previous buffer
 noremap <LEADER><TAB>   :b#<CR>
 
+"Yapf formatter
+nnoremap <leader>y :Yapf<cr>
+
 """""""SUMARY"""""""
 " Control + l = unselect the words when searching
 " Control + b = indent the code
-" F2  = Opens the files (nerdtree)
+" t  = Opens the files (nerdtree)
+" n = Show/hide line numbers
+" y = Yapf formatter
 " F3 = Opens the minimal screen (goyo)
 " Esc to exit the terminal enabled
 " Space + c + i = dis/comment the current line.

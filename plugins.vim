@@ -23,6 +23,8 @@ Plug 'bcicen/vim-vice'
 
 
 "*************INTERFACE*****************"
+"Golden Ratio
+Plug 'roman/golden-ratio'
 "NerdTree"
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -30,7 +32,7 @@ Plug 'Xuyuanp/nerdtree-git-plugin'
 "Plug 'itchyny/lightline.vim'
 Plug 'bling/vim-airline'
 "Show line numbers"
-"Plug 'myusuf3/numbers.vim'
+Plug 'myusuf3/numbers.vim'
 "Goyo"
 Plug 'junegunn/goyo.vim'
 "Awesome icons"
@@ -74,6 +76,13 @@ Plug 'honza/vim-snippets'
 " Auto pairs completion in brackets
 Plug 'jiangmiao/auto-pairs'
 
+"Lintern
+Plug 'w0rp/ale'
+
+"General formatting
+"needs third-party programs for each lenguage (see documentation)
+Plug 'Chiel92/vim-autoformat'
+
 "*************LANGUAGES******************"
 Plug 'plasticboy/vim-markdown'
 Plug 'tomlion/vim-solidity'
@@ -89,8 +98,10 @@ Plug 'Shougo/neosnippet'
 Plug 'Shougo/neosnippet-snippets'
 
 "Language autocompletion
-"Python autcompletion
+"Python autcompletion and formatting
 Plug 'zchee/deoplete-jedi'
+Plug 'mindriot101/vim-yapf'
+
 "C++ and related languages
 Plug 'zchee/deoplete-clang'
 "Rust autocompletion
