@@ -80,6 +80,9 @@ Plug 'w0rp/ale'
 "needs third-party programs for each lenguage (see documentation)
 Plug 'Chiel92/vim-autoformat'
 
+"Factorization
+Plug 'apalmer1377/factorus'
+
 "*************LANGUAGES******************"
 Plug 'tomlion/vim-solidity'
 Plug 'rust-lang/rust.vim'
