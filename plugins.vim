@@ -107,6 +107,9 @@ Plug 'zchee/deoplete-clang'
 Plug 'sebastianmarkow/deoplete-rust'
 Plug 'racer-rust/vim-racer'
 
+" Conda environments
+Plug 'cjrh/vim-conda'
+
 " Dash App
 Plug 'rizzatti/dash.vim'
 
