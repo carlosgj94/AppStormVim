@@ -1,10 +1,6 @@
 source ~/.config/nvim/plugins.vim
 source ~/.config/nvim/shortcuts.vim
 
-" Map the esc to jk
-imap jk <ESC>
-"Write :w to save in insert mode
-imap <silent> :w <C-o>:w<CR>
 "Map leader
 map <SPACE> <leader>
 "Shows tabline, always
@@ -14,8 +10,8 @@ map <SPACE> <leader>
 filetype plugin on
 
 " I dont want numbers
-set nornu
-set nonumber
+"set nornu
+"set nonumber
 
 """""""""Indentacion""""""""""""""""""
 filetype plugin indent on
@@ -45,10 +41,19 @@ setlocal statusline=%#Normal#
 syntax enable
 "syntax on
 set background=light
-let g:solarized_termcolors=256 
-let g:solarized_termtrans = 1
-colorscheme challenger_deep 
+colorscheme sonho_light
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
+autocmd FileType vue syntax sync fromstart
+
+" Autcompletion with tab
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Control to confirm autocompletion
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : "\<C-g>u\<CR>"
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
+inoremap <silent><expr> <cr> pumvisible() ? coc#_select_confirm() : 
+                                           \"\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 
 "" airline settings
@@ -67,5 +72,23 @@ let g:airline_section_b="%f"
 let g:airline_section_c=""
 let g:airline_section_x=""
 
-let g:deoplete#sources#rust#racer_binary='/Users/carlosgonzalezjuarez/.cargo/bin/racer'
-let g:deoplete#sources#rust#rust_source_path='/Users/carlosgonzalezjuarez/.rustup/toolchains/nightly-x86_64-apple-darwin/src'
+"" Config CoC
+" Better display for messages
+set cmdheight=2
+
+" You will have bad experience for diagnostic messages when it's default 4000.
+set updatetime=300
+
+" don't give |ins-completion-menu| messages.
+set shortmess+=c
+
+" always show signcolumns
+set signcolumn=yes
+
+" Use navigate diagnostics
+nmap <silent> <LEADER>pe <Plug>(coc-diagnostic-prev)
+nmap <silent> <LEADER>ne <Plug>(coc-diagnostic-next)
+
+" Highlight symbol under cursor on CursorHold
+autocmd CursorHold * silent call CocActionAsync('highlight')
+nmap <silent> gr <Plug>(coc-references)

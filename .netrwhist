@@ -1,0 +1,9 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhist_cnt =7
+let g:netrw_dirhist_1='/Users/carlosgonzalezjuarez/Development/GuesserNuxt'
+let g:netrw_dirhist_2='/Users/carlosgonzalezjuarez/Development'
+let g:netrw_dirhist_3='/Users/carlosgonzalezjuarez/Development/GuesserNuxt'
+let g:netrw_dirhist_4='/Users/carlosgonzalezjuarez/Development/GuesserNuxt/cypress'
+let g:netrw_dirhist_5='/Users/carlosgonzalezjuarez/Development/GuesserNuxt'
+let g:netrw_dirhist_6='/Users/carlosgonzalezjuarez/Development'
+let g:netrw_dirhist_7='/Users/carlosgonzalezjuarez/Development/GuesserNuxt/components'
