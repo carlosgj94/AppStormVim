@@ -5,6 +5,8 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'dracula/vim'
 "Solarized for bright themes
 Plug 'ericbn/vim-solarized'
+
+Plug 'hardselius/warlock'
 "Sonho theme
 Plug 'protesilaos/prot16-vim'
 Plug 'protesilaos/prot16-vim-airline'
@@ -12,6 +14,8 @@ Plug 'protesilaos/prot16-vim-airline'
 Plug 'challenger-deep-theme/vim', { 'as': 'challenger-deep' }
 
 "*************INTERFACE*****************"
+"Golden ratio
+Plug 'roman/golden-ratio'
 "NerdTree"
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
@@ -31,6 +35,25 @@ Plug 'airblade/vim-rooter'
 " Fuzzy finder files
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
+
+" Solidity
+Plug 'tomlion/vim-solidity'
+
+" Depend on the latest version via tag.
+Plug 'Olical/aniseed', { 'tag': 'v3.1.0' }
+
+" For Fennel highlighting (based on Clojure).
+Plug 'bakpakin/fennel.vim'
+
+" Used by the evaluation mappings.
+Plug 'guns/vim-sexp'
+
+" Highly recommended if you're going to use vim-sexp.
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
+
+
+" Blame
+Plug 'APZelos/blamer.nvim'
 
 Plug 'myusuf3/numbers.vim'
 

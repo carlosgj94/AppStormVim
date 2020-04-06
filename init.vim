@@ -40,8 +40,8 @@ setlocal statusline=%#Normal#
 
 syntax enable
 "syntax on
-set background=light
-colorscheme sonho_light
+set background=dark
+colorscheme warlock
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 autocmd FileType vue syntax sync fromstart
 
