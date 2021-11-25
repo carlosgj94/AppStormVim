@@ -16,13 +16,9 @@ vim.cmd 'autocmd BufWritePost plugins.lua PackerCompile' -- Auto compile when th
 
 
 local cmd = vim.cmd
-local indent = 4
+local indent = 2
 
 cmd 'syntax enable'
--- cmd 'colorscheme dracula_pro_van_helsing'
--- cmd 'let g:dracula_colorterm = 0'
-require('moonlight').set()
-
 cmd 'filetype plugin indent on'
 utils.opt('b', 'expandtab', true)
 utils.opt('b', 'shiftwidth', indent)
@@ -38,17 +34,29 @@ utils.opt('o', 'splitright', true)
 utils.opt('o', 'wildmode', 'list:longest')
 utils.opt('w', 'number', true)
 utils.opt('w', 'relativenumber', true)
-utils.opt('o', 'clipboard','unnamed,unnamedplus')
 
 vim.opt.termguicolors = true
 
 -- Highlight on yank
 vim.cmd 'au TextYankPost * lua vim.highlight.on_yank {on_visual = false}'
 
+-- cmd 'colorscheme dracula_pro_van_helsing'
+cmd 'colorscheme monochrome'
+-- cmd 'let g:dracula_colorterm = 0'
+-- require('moonlight').set()
+
+
 require("bufferline").setup {}
 require('lualine').setup{
-    options = {theme = 'moonlight'}
+    options = {theme = 'spaceduck'}
 }
 
 -- Set completeopt to have a better completion experience
 vim.o.completeopt = 'menuone,noselect'
+
+--Map blankline
+vim.g.indent_blankline_char = '┊'
+vim.g.indent_blankline_filetype_exclude = { 'help', 'packer' }
+vim.g.indent_blankline_buftype_exclude = { 'terminal', 'nofile' }
+vim.g.indent_blankline_char_highlight = 'LineNr'
+vim.g.indent_blankline_show_trailing_blankline_indent = false

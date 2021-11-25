@@ -15,7 +15,7 @@ api.nvim_set_keymap("n", "<leader>ff", "<cmd>Telescope find_files<cr>", {noremap
 api.nvim_set_keymap("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", {noremap = true})
 api.nvim_set_keymap("n", "<leader>fb", "<cmd>Telescope file_browser<cr>", {noremap = true})
 api.nvim_set_keymap("n", "<leader>ft", "<cmd>Telescope help_tags<cr>", {noremap = true})
-api.nvim_set_keymap("n", "<leader>fp", "<cmd>Telescope projects<cr>", {noremap = true})
+api.nvim_set_keymap("n", "<leader>fp", "<cmd>lua require'telescope'.extensions.repo.list{}<cr>", {noremap = true})
 
 -- LSP
 api.nvim_set_keymap("n", "<leader>la", "<cmd>Telescope lsp_code_actions theme=cursor<cr>", {noremap = true})
@@ -28,5 +28,4 @@ api.nvim_set_keymap("n", "<leader>gc", "<cmd>Telescope git_commits<cr>", {norema
 api.nvim_set_keymap("n", "<leader>gsh", "<cmd>Telescope git_stash<cr>", {noremap = true})
 
 api.nvim_set_keymap("n", "<leader>c", "<cmd>Format <cr>", {noremap = true})
-
 

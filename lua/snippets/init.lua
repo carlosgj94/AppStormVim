@@ -1,30 +1,53 @@
-local cmp = require 'cmp'
-local luasnip = require 'luasnip'
+local cmp = require('cmp')
+local lspkind = require('lspkind')
+
+local source_mapping = {
+	nvim_lsp = "[LSP]",
+	nvim_lua = "[Lua]",
+	buffer = "[Buffer]",
+	cmp_tabnine = "[TN]",
+	path = "[Path]",
+}
 
 cmp.setup({
     snippet = {
-        -- REQUIRED - you must specify a snippet engine
         expand = function(args)
-            require('luasnip').lsp_expand(args.body) -- For `luasnip` users.
-        end
+            vim.fn["vsnip#anonymous"](args.body)
+        end,
     },
-    mapping = {
-        ['<C-d>'] = cmp.mapping(cmp.mapping.scroll_docs(-4), {'i', 'c'}),
-        ['<C-f>'] = cmp.mapping(cmp.mapping.scroll_docs(4), {'i', 'c'}),
-        ['<C-Space>'] = cmp.mapping(cmp.mapping.complete(), {'i', 'c'}),
-        ['<C-y>'] = cmp.config.disable, -- Specify `cmp.config.disable` if you want to remove the default `<C-y>` mapping.
-        ['<C-e>'] = cmp.mapping({i = cmp.mapping.abort(), c = cmp.mapping.close()}),
-        ['<CR>'] = cmp.mapping.confirm({select = true})
+   mapping = {
+       ["<cr>"] = cmp.mapping.confirm({select = true}),
+       ["<Tab>"] = cmp.mapping.select_next_item(),
+       ["<S-Tab>"] = cmp.mapping.select_prev_item()
+   },
+   formatting = {
+		format = function(entry, vim_item)
+			vim_item.kind = lspkind.presets.default[vim_item.kind]
+			local menu = source_mapping[entry.source.name]
+			if entry.source.name == 'cmp_tabnine' then
+				if entry.completion_item.data ~= nil and entry.completion_item.data.detail ~= nil then
+					menu = entry.completion_item.data.detail .. ' ' .. menu
+				end
+				vim_item.kind = ''
+			end
+			vim_item.menu = menu
+			return vim_item
+		end
+	},
+    sources = {
+        { name = "nvim_lsp" },
+       	{ name = 'cmp_tabnine' },
+        { name = "buffer" },
+        { name = "luasnip" },
+        { name = "path" },
     },
-    sources = cmp.config.sources({
-        {name = 'nvim_lsp'}, {name = 'luasnip'} -- For luasnip users.
-    }, {{name = 'buffer'}})
 })
 
--- Use buffer source for `/` (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline('/', {sources = {{name = 'buffer'}}})
-
--- Use cmdline & path source for ':' (if you enabled `native_menu`, this won't work anymore).
-cmp.setup.cmdline(':', {sources = cmp.config.sources({{name = 'path'}}, {{name = 'cmdline'}})})
-
-
+local tabnine = require('cmp_tabnine.config')
+tabnine:setup({
+        max_lines = 10000;
+        max_num_results = 10;
+        sort = true;
+	run_on_every_keystroke = true;
+	snippet_placeholder = '..';
+})

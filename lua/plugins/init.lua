@@ -10,16 +10,26 @@ return require('packer').startup(function()
   -- Tree Sitter
   use { 'nvim-treesitter/nvim-treesitter', opt = true }
   -- LSP and completion
-  use { 'neovim/nvim-lspconfig' }
-  use { 'hrsh7th/cmp-nvim-lsp' }
   use { 'hrsh7th/nvim-cmp' }
-  use { 'L3MON4D3/LuaSnip' }
+  use { 'hrsh7th/cmp-nvim-lsp' }
+  use { 'hrsh7th/cmp-buffer' }
+  use { 'hrsh7th/cmp-path'}
+  use { 'hrsh7th/vim-vsnip' }
+  use {'tzachar/cmp-tabnine', run='./install.sh', requires = 'hrsh7th/nvim-cmp'}
+  use 'onsails/lspkind-nvim'
+  use { 'neovim/nvim-lspconfig' }
+  -- Comments
+  use {
+    'numToStr/Comment.nvim',
+    config = function()
+        require('Comment').setup()
+    end
+}
   -- Terminal
   use {"akinsho/toggleterm.nvim"}
   use {'akinsho/bufferline.nvim', requires = 'kyazdani42/nvim-web-devicons'}
   -- Status line
   use { 'hoob3rt/lualine.nvim', requires = {'kyazdani42/nvim-web-devicons', opt = true} }
-
   use { 'mhartington/formatter.nvim' }
 
 
@@ -30,32 +40,26 @@ return require('packer').startup(function()
         require("better_escape").setup()
     end,
   }
-  use {
-    "ahmedkhalf/project.nvim",
-    config = function()
-    require("project_nvim").setup {
-        detection_methods = { "lsp", "pattern" },
-        patterns = { ".git", "_darcs", ".hg", "Cargo.toml", ".svn", "Makefile", "package.json" },
-        -- ignore_lsp = {"rust-analyzer"},
-        silent_chdir = false
-    }
-    end
-  }
-
+  use {'cljoly/telescope-repo.nvim'}
 
   -- Tabs
-  use { 'romgrk/barbar.nvim', opt = true }
   use { 'mhinz/vim-startify' }
 
   -- Scala development
   use { 'scalameta/nvim-metals', requires = {{ 'nvim-lua/plenary.nvim' }} }
   -- Lua development
   use { 'tjdevries/nlua.nvim' }
-
+  use { 'tomlion/vim-solidity'}
 
 
   -- Themes
   use 'shaunsingh/moonlight.nvim'
+  use 'pineapplegiant/spaceduck'
+  use {'kdheepak/monochrome.nvim', config = function()
+    vim.cmd 'colorscheme monochrome'
+  end}
+  use { 'kyazdani42/blue-moon' }
+  use 'bluz71/vim-nightfly-guicolors'
 end)
 
 

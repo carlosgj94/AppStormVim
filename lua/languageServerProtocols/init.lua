@@ -1,16 +1,19 @@
 local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
 
--- Metals
-vim.opt_global.shortmess:remove("F")
-require'lspconfig'.metals.setup {capabilities = capabilites}
+require'lspconfig'.tsserver.setup{capabilities = capabilities}
 
-require'lspconfig'.rust_analyzer.setup {capabilities = capabilities}
+require'lspconfig'.rust_analyzer.setup {
+    capabilities = capabilities
+}
 
 local function rustfmt()
     return {exe = 'rustfmt', args = {'--emit=stdout --edition 2021'}, stdin = true}
 end
 
 require('formatter').setup({logging = false, filetype = {rust = {rustfmt}}})
+
+-- Tree Sitter comments
+require('Comment').setup()
 
 -- Sumneko Lua
 USER = vim.fn.expand('$USER')
@@ -45,6 +48,7 @@ require'lspconfig'.sumneko_lua.setup {
             workspace = {
                 -- Make the server aware of Neovim runtime files
                 library = {[vim.fn.expand('$VIMRUNTIME/lua')] = true, [vim.fn.expand('$VIMRUNTIME/lua/vim/lsp')] = true},
+                checkThirdParty = false,
                 maxPreload = 10000, -- Add this if missing or increase it
                 preloadFileSize = 10000 -- Add this if missing or increase it
             }
@@ -52,6 +56,7 @@ require'lspconfig'.sumneko_lua.setup {
     }
 }
 
+--[[
 require"lspconfig".efm.setup {
     init_options = {documentFormatting = true},
     filetypes = {"lua"},
@@ -67,4 +72,9 @@ require"lspconfig".efm.setup {
         }
     }
 }
+-- Metals
+vim.opt_global.shortmess:remove("F")
+require'lspconfig'.metals.setup {capabilities = capabilities}
 
+
+-]]
